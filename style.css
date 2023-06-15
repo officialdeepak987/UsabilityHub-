@@ -59,6 +59,7 @@ list-style: none;
     
     margin-inline: 50px;
     padding-inline:var(--padding-inline-section) ;
+    overflow: hidden;
 
 }
 .top-banner{
@@ -114,6 +115,7 @@ border-radius: 5px;
 .main-nav {
     margin-top: 20px;
     justify-content: space-between;
+    position: relative;
     
 }
 .nav-links {
@@ -150,7 +152,7 @@ header{
 }
 
 .header-right img{
-    width: 600px;
+    width: 100%;
 
 }
 .header-left{
@@ -167,6 +169,7 @@ header{
     margin-top: 20px;
 }
 
+
 /*  company section */
 
 .companies-header{
@@ -179,8 +182,9 @@ header{
 
 .companies-logo{
     /* gap: 50px; */
-    justify-content: space-between;
-    flex: wrap;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
   
 }
 .logos{
@@ -260,6 +264,8 @@ gap: 30px;
     background-repeat: no-repeat;
 }
 
+
+
 /*  example section */
 
 
@@ -281,7 +287,9 @@ gap: 30px;
 
 .example-img{
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
+    /* margin-block: 30px; */
+    flex-wrap: wrap;
 
 }
 
@@ -289,8 +297,7 @@ gap: 30px;
     width: 300px;
 }
 
-.example-card{
-   
+.example-card{ 
    width: 23%;
    position: relative;
    min-height:300px ;
@@ -379,4 +386,203 @@ footer{
 .sub-footer-container{
    justify-content: center;
    gap: 20px;
+}
+
+
+
+
+/* media queray */
+.nav-toggle{
+    display: none;
+}
+
+
+@media(max-width:1142px){
+    .nav-links {
+        /* display: none; */
+        position: absolute;
+        left: -100%;
+        top: 100%;
+        background-color: #ffff;
+        width: 100%;
+        
+        
+    }
+    .nav-links.active{
+        left: 0;
+    }
+    .main-nav{
+        overflow: initial;
+    }
+
+    .nav-links ul{
+        flex-direction: column;
+    }
+
+    .nav-toggle{
+        display:block;
+    }
+    .bx {
+        font-size: 3rem;
+    }
+
+}
+
+@media(max-width:942px){
+    .nav-links {
+        /* display: none; */
+        position: absolute;
+        left: -100%;
+        top: 100%;
+        background-color: #ffff;
+        width: 100%;
+        
+        
+    }
+    .nav-links.active{
+        left: 0;
+    }
+    .main-nav{
+        overflow: initial;
+    }
+
+    .nav-links ul{
+        flex-direction: column;
+    }
+
+    .nav-toggle{
+        display:block;
+    }
+    .bx {
+        font-size: 3rem;
+    }
+
+}
+
+@media(max-width:742px){
+    .nav-links {
+        /* display: none; */
+        position: absolute;
+        left: -100%;
+        top: 100%;
+        background-color: #ffff;
+        width: 100%;
+        
+        
+    }
+    .nav-links.active{
+        left: 0;
+    }
+    .main-nav{
+        overflow: initial;
+    }
+
+    .nav-links ul{
+        flex-direction: column;
+    }
+
+    .nav-toggle{
+        display:block;
+    }
+    .bx {
+        font-size: 3rem;
+    }
+
+}
+
+
+@media(max-width:991px){
+    .nav-links {
+        display: none;
+    }
+
+    .nav-toggle{
+        display:block;
+    }
+
+
+    .example-img{
+        gap: 10px;
+    }
+
+    .example-card{
+        width: calc(50% - 10px);
+    }
+    /* .example-card{
+        flex-direction: column;
+    } */
+
+
+
+}
+
+@media(max-width:614px){
+
+    .example-card{
+        width: calc(50% - 10px);
+        flex-direction: column;
+    }
+
+}
+
+@media(max-width:514px){
+
+    .example-img{
+      flex-direction: column;
+    }
+    .example-card{
+        width: 100%;
+    }
+
+}
+
+
+
+@media (max-width:760px){
+
+    .header-left{
+       max-width: 100vh;
+    }
+    .header-section{
+        flex-direction: column;
+    }
+
+   .big-feature-container{
+        flex-direction: column;
+    }
+}
+
+
+@media(max-width:791px){
+
+    .footer-container{
+        flex-direction: column;
+    }
+
+    .company-logo{
+        text-align: center;
+    }
+    .link-column{
+        margin-top: 30px;
+    }
+    .link-column h4{
+        font-size: 1.6rem;
+    }
+    .hover-link{
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width:960px){
+    .sub-footer-container{
+        flex-direction: column;
+    }
+
+}
+
+
+@media(max-width:990px){
+    .fa-brands {
+        font-size: 30px;
+    }
 }
